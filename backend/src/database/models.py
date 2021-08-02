@@ -22,7 +22,7 @@ def setup_db(app):
     db.init_app(app)
 
 
-'''
+'''f
 db_drop_and_create_all()
     drops the database tables and starts fresh
     can be used to initialize a clean database
@@ -40,8 +40,8 @@ def db_drop_and_create_all():
     )
 
 
-drink.insert()
-# ROUTES
+    drink.insert()
+    # ROUTES
 
 '''
 Drink
@@ -64,7 +64,7 @@ class Drink(db.Model):
     '''
 
     def short(self):
-        print(json.loads(self.recipe))
+        # print(json.loads(self.recipe))
         short_recipe = [{'color': r['color'], 'parts': r['parts']} for r in json.loads(self.recipe)]
         return {
             'id': self.id,
